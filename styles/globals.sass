@@ -1,0 +1,464 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400700&display=swap')
+
+
+* 
+	box-sizing: border-box
+	margin: 0
+	padding: 0
+	max-width: 100vw
+	font-family: 'Oswald', sans-serif
+::placeholder
+	color: white
+.flex
+	display: flex
+
+.flexCenter
+	align-items: center
+	display: flex
+	justify-content: center
+
+a
+	text-decoration: none
+	color: inherit
+
+main
+	background: #0E0E0E
+	overflow-x: hidden
+
+section
+	min-height: 100vh
+	position: relative
+
+section:nth-of-type(2), section:nth-of-type(3)
+	z-index: 3
+
+.svgBox
+	position: absolute
+	height: 100%
+	width: 100%
+	z-index: 1
+
+svg
+	height: 100%
+	width: 100%
+path
+	fill: none
+	stroke-width: .36px
+	stroke: white
+	stroke-dasharray: 1000
+	stroke-dashoffset: 1000
+	stroke-width: 2.26px
+
+.overlay
+	left: 0
+	min-height: 100vh
+	position: fixed
+	overflow: hidden
+	top: 0
+	width: 100%
+	z-index: 4
+	&::before
+		background: black
+		content: ''
+		height: 100%
+		position: absolute
+		opacity: 0.75
+		width: 100%
+		z-index: -1
+	.projectContainer
+		background: white
+		height: 100vh
+		margin: auto
+		min-width: 100%
+		max-width: 100%
+		overflow: auto
+	
+
+.sectionHeader
+	align-items: center
+	letter-spacing: 2px
+	position: relative
+	overflow: hidden
+	z-index: 3
+	&::before
+		background: white
+		border: solid #0E0E0E 3px
+		border-left: none
+		border-right: none
+		content: ''
+		height: 50%
+		position: absolute
+		left: 0
+		top: 25%
+		width: 100%
+		z-index: -1
+	h2
+		margin: auto auto auto 1em
+	span
+		background: white
+		border: solid #0E0E0E .5rem
+		border-radius: 50%
+		display: inline-flex
+		margin: auto .5em auto auto
+		padding: 1rem
+		img
+			background: white
+			border-radius: 50%
+			margin: auto
+
+.myImgBox
+	z-index: 1
+	img
+		bottom: 0
+		position: absolute
+		height: 320px
+		left: calc((100% - 283px) / 2)
+		width: 283px
+	img:nth-of-type(1)
+		filter: grayscale(1) contrast(5) brightness(1) 
+	img:nth-of-type(2)
+		height: 310px
+		mix-blend-mode: hard-light
+
+.filler
+	min-height: 100vh
+	width: 100%
+	order: 1
+.intro
+	background: white
+	flex-direction: column
+	justify-content: space-around
+	min-height: 100vh
+	padding: 2em 0
+	position: relative
+	order: 2
+	width: 100%
+	line-height: 1.5rem
+	z-index: 2
+	p
+		font-size: 1.5rem
+		font-weight: 700
+		padding: 0 1rem
+	p:nth-of-type(1)
+	p:nth-of-type(2)
+		border: solid #0E0E0E 3px
+		padding: 0
+		text-align: center
+		margin: 0 auto 0 auto
+		width: 75%
+		span
+			display: block
+			padding: .5rem 0
+			min-height: 3rem
+		span:nth-of-type(1)
+			padding-top: .5em
+		span:nth-of-type(2)
+			background: #0E0E0E
+			border: solid 3px white
+			color: white
+	p:nth-of-type(3)
+		font-size: 1rem
+	h1
+		border: solid #0E0E0E 3px
+		border-left: none
+		border-right: none
+		position: relative
+		text-align: center
+		overflow: hidden
+		font-size: 3rem
+		padding: 1rem
+		&::before
+			background: #0E0E0E
+			content: ''
+			height: 100%
+			left: 0
+			position: absolute
+			top: 0
+			width: 50%
+			z-index: -1
+		span
+			color: white
+
+.projectCard
+	background: white
+	cursor: pointer
+	-webkit-clip-path: polygon(100% 0, 100% 90%, 0 100%, 0 10%)
+	clip-path: polygon(100% 0, 100% 90%, 0 100%, 0 10%)
+	justify-content: center
+	margin: 1em auto
+	position: relative
+	padding: 2em
+	z-index: 3
+	div
+		max-width: 100%
+		order: 2
+		img
+			max-width: 100%
+	article
+		display: none
+		order: 1
+
+.projectCard:nth-of-type(odd)
+	clip-path: polygon(100% 10%, 100% 100%, 0 90%, 0 0)
+	-webkit-clip-path: polygon(100% 10%, 100% 100%, 0 90%, 0 0)
+	div
+		order: 1
+	article
+		order: 2
+
+.projectCardBig
+	flex-direction: column
+	.closeProject
+		color: white
+		cursor: pointer
+		font-weight: 700
+		font-size: 2em
+		position: absolute
+		top: 1em
+		right: 1em
+		span
+			font-size: 1rem
+			text-decoration: underline
+	.pcbImg
+		margin: auto
+		max-width: 100%
+		img
+			max-width: 100%
+	article
+		padding: 1rem
+		flex-direction: column
+		h2
+			text-align: center
+			margin-bottom: 1rem
+		p
+			margin-bottom: 1rem
+			line-height: 1.5
+		div
+			flex-wrap: wrap
+			gap: 1rem
+			div
+				align-items: center
+				justify-content: center
+				flex-direction: column
+				margin: auto
+				font-weight: 700
+	.button
+		width: auto
+		p
+			padding-top: 1rem
+
+		span
+			padding: 0
+
+.contactCard
+	background: white
+	flex-direction: column
+	margin: auto
+	padding: 1rem
+	width: Min(100%, 720px)
+	*
+		margin-bottom: 1rem
+	h3
+		font-size: 1.5em
+		text-align: center
+		width: 100%
+	p
+		font-weight: 700
+		text-align: center
+	p:nth-of-type(2)
+		font-size: 1.2em
+	p:nth-of-type(3)
+		font-size: 1.4em
+	form
+		flex-wrap: wrap
+		justify-content: space-around
+		margin: auto
+		width: 100%
+		label, input
+			margin-bottom: 0
+		.formGroup
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			width: 100%
+			label
+				font-weight: 700
+				margin-bottom: .5rem
+			input, textarea
+				border: black solid 3px
+				border-left: 0
+				border-right: 0
+				border-top: 0
+				background: #0E0E0E
+				color: white
+				padding: .5em
+				width: 90% !important
+				font-weight: 700
+		button
+			border: black solid 3px
+			font-weight: 700
+			letter-spacing: 2px
+			padding: 1em 2em
+
+.socialMediaCard
+	flex-direction: column
+	justify-content: space-around
+	margin: auto
+
+.button
+	align-items: center
+	cursor: pointer
+	justify-content: center
+	overflow: hidden
+	position: relative
+	margin: auto
+	padding: 2em
+	width: 300px
+	z-index: 1
+	&::before
+		background: white
+		border: solid black 3px
+		box-shadow: 0px 0px 5px white
+		content: ''
+		height: 50%
+		position: absolute
+		top: 25%
+		width: 100%
+		z-index: -1
+	p
+		font-weight: 700
+		letter-spacing: 2px
+		padding-top: .5rem
+		padding-right: 3em
+		margin-right: auto
+		transform: translateX(-10px)
+	span
+		background: black
+		border-radius: 50%
+		border: solid 3px black
+		box-shadow: 0px 0px 5px white
+		position: absolute
+		right: 0
+		img
+			background: white
+			border-radius: 50%
+
+.indexPage
+	.myImgBox
+		opacity: 0
+			
+.mainPage
+	opacity: 0
+	section:nth-of-type(1)
+		display: flex
+		flex-direction: column
+		.svgBox
+			height: 40%
+			overflow: visible
+			position: fixed
+			svg
+				path
+					fill: white
+					stroke-dashoffset: 0
+	.myImgBox
+		img
+			opacity: 0
+			position: fixed
+
+@media only screen and (min-width: 576px)
+	.socialMediaCard
+		flex-direction: row
+		flex-wrap: wrap
+
+	.contactCard
+		form
+			.formGroup:nth-of-type(1), .formGroup:nth-of-type(2)
+				width: 50%
+
+	.overlay
+		.projectContainer
+			background: white
+			height: 100vh
+			margin: auto
+			min-width: 75%
+			max-width: 75%
+	.projectCard
+		div
+			max-width: 75%
+			img
+				max-width: 100%
+		article
+			display: block
+			width: 25%
+			h2
+				display: none
+			div
+				align-items: center
+				justify-content: space-around
+				flex-direction: column
+				flex-wrap: wrap
+				height: 100%
+				max-width: 100%
+				div
+					display: flex
+					height: auto
+					width: 50%
+					img
+						margin: auto
+					p
+						display: none
+						white-space: nowrap
+						text-align: center
+
+@media only screen and (min-width: 920px)
+	.contactCard
+		margin: auto 1em 1em auto
+		width: 50%
+
+	.filler
+		width: 60%
+	.intro
+		margin-left: auto
+		height: 100%
+		width: 40%
+	.mainPage
+		section:nth-of-type(1)
+			flex-direction: row
+			.svgBox
+				width: 60%
+			.myImgBox
+				img
+					left: calc((66% - 283px) / 2 - 1em)
+					
+	.sectionHeader
+		span
+			margin-right: 1em
+
+	.overlay
+		.projectContainer
+			min-width: 50%
+			max-width: 50%
+	
+	.projectCard
+		justify-content: space-between
+		padding-top: 3em
+		max-width: 75%
+		div
+			max-width: 50%
+			img
+				max-width: 100%
+		article
+			padding-left: 2rem
+			width: 50%
+			div
+				flex-direction: row
+				div
+					flex-direction: column
+					p
+						display: block
+						font-weight: 700
+			h2
+				display: block
+				text-align: center
+				width: 100%
+
